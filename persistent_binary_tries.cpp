@@ -115,47 +115,9 @@ int smallerThanX(node *curr, node *prev, int x, int bitcount)
 
 int main() 
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    initialize();
-    int n, last = 1;
-    cin >> n;
-    while(n--)
-    {
-        int x;
-        cin >> x;
-        if(x == 0)
-        {
-            int k;
-            cin >> k;
-            version[last] = insert(version[last-1], k, 20);
-            last++;
-        }
-        else if(x == 1)
-        {
-            int l, r, k;
-            cin >> l >> r >> k;
-            cout << maxXOR(version[r], version[l-1], k, 20) << endl;
-        }
-        else if(x == 2)
-        {
-            int k;
-            cin >> k;
-            last -= k;
-        }
-        else if(x == 3)
-        {
-            int l, r, k;
-            cin >> l >> r >> k;
-            cout << smallerThanX(version[r], version[l-1], k, 20) << endl;
-        }
-        else if(x == 4)
-        {
-            int l, r, k;
-            cin >> l >> r >> k;
-            cout << kthSmallest(version[r], version[l-1], k, 20) << endl;
-        }
-    }
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	initialize();
 	return 0;
 }
